@@ -1,4 +1,4 @@
-import { Table, Trash } from 'lucide-react'
+import { Trash } from 'lucide-react'
 import React, { FC } from 'react'
 import { Button } from '../ui/button'
 interface TasksProps {

@@ -1,13 +1,14 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import Heading from '@/components/shared/heading'
 import TaskForm from '@/components/shared/taskForm'
 import Tasks from '@/components/shared/Tasks'
 
-const page: React.FC = () => {
-  const [darkMode, setDarkMode] = React.useState<boolean>(false)
-  const [taskList, setTaskList] = React.useState<string[] | null>([])
+
+const App = () => {
+  const [darkMode, setDarkMode] = useState<boolean>(false)
+  const [taskList, setTaskList] = useState<string[] | null>([])
   return (
     <>
       <section className='w-screen h-screen flex items-center justify-center py-10 dark'>
@@ -24,4 +25,4 @@ const page: React.FC = () => {
   )
 }
 
-export default page
+export default App
