@@ -12,7 +12,9 @@ const TaskForm: React.FC<IProps> = ({ setTaskList, taskList }) => {
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     const text = (e.currentTarget[0] as HTMLInputElement).value
-    setTaskList([...(taskList || []), text])
+    if (text.trim().length > 0) {
+      setTaskList([...(taskList || []), text])
+    }
   }
   return (
     <>
